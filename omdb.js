@@ -2,7 +2,7 @@
 
 $('.search-button').on('click', function(){
     $.ajax({
-        url: 'http://www.omdbapi.com/?apikey=edbec6cb&s=' + $(".input-keyword").val(),
+        url: 'https://www.omdbapi.com/?apikey=edbec6cb&s=' + $(".input-keyword").val(),
         success: res => {
             const movies = res.Search;
             console.log(movies);
@@ -27,7 +27,7 @@ $('.search-button').on('click', function(){
             // KETIKA TOMBOL DETAIL DI KLIK
             $('.detailBtn').on('click', function(){
                 $.ajax({
-                    url: 'http://www.omdbapi.com/?apikey=edbec6cb&i=' + $(this).data("imdbid"),
+                    url: 'https://www.omdbapi.com/?apikey=edbec6cb&i=' + $(this).data("imdbid"),
                     success: res => {
                         const details = `<div class="container-fluid">
                         <div class="row">
