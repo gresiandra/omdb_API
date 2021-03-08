@@ -47,6 +47,9 @@ $('.search-button').on('click', function(){
                     </div>`;
     
                     $('.modal-body').html(details);
+                    },
+                    error: e => {
+                        console.log(e.responseText);
                     }
                 });
             });
